@@ -16,20 +16,20 @@ use Illuminate\Support\Facades\Route;
 // Front
 Auth::routes(['register' => false]);
 
-Route::get('/', [App\Http\Controllers\HomepageController::class, 'index'])->name('home');
-Route::get('/project', [App\Http\Controllers\HomepageController::class, 'project'])->name('project');
-Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
-Route::get('/cars', [App\Http\Controllers\CarsController::class, 'index'])->name('cars');
-Route::get('/car/{id}', [App\Http\Controllers\CarsController::class, 'car'])->name('car');
-Route::get('/projects/{id}', [App\Http\Controllers\ProjectController::class, 'singleProject'])->name('projects-single');
-Route::post('/contact/new', [App\Http\Controllers\ContactController::class, 'contactSend'])->name('new-contact');
-Route::post('/service/reservation/update', [App\Http\Controllers\ServiceController::class, 'save'])->name('service-reservation.update');
-Route::get('/auto-rental', [App\Http\Controllers\AutoRentalController::class, 'search'])->name('auto-rental.search');
-Route::get('/auto-rental/car/{id}', [App\Http\Controllers\AutoRentalController::class, 'car'])->name('auto-rental.car');
-Route::get('/service-limusine', [App\Http\Controllers\ServiceController::class, 'serviceLimusine'])->name('service-limusine');
-Route::get('/auto-service-reservation', [App\Http\Controllers\ServiceController::class, 'autoServiceReservation'])->name('auto-service.reservation');
-Route::post('/set/locale', [App\Http\Controllers\HomepageController::class, 'setLocale'])->name('locale.set');
-Route::get('/privacy-policy', [App\Http\Controllers\HomepageController::class, 'privacyPolicy'])->name('privacy-policy');
+Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+// Route::get('/project', [App\Http\Controllers\HomepageController::class, 'project'])->name('project');
+// Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
+// Route::get('/cars', [App\Http\Controllers\CarsController::class, 'index'])->name('cars');
+// Route::get('/car/{id}', [App\Http\Controllers\CarsController::class, 'car'])->name('car');
+// Route::get('/projects/{id}', [App\Http\Controllers\ProjectController::class, 'singleProject'])->name('projects-single');
+// Route::post('/contact/new', [App\Http\Controllers\ContactController::class, 'contactSend'])->name('new-contact');
+// Route::post('/service/reservation/update', [App\Http\Controllers\ServiceController::class, 'save'])->name('service-reservation.update');
+// Route::get('/auto-rental', [App\Http\Controllers\AutoRentalController::class, 'search'])->name('auto-rental.search');
+// Route::get('/auto-rental/car/{id}', [App\Http\Controllers\AutoRentalController::class, 'car'])->name('auto-rental.car');
+// Route::get('/service-limusine', [App\Http\Controllers\ServiceController::class, 'serviceLimusine'])->name('service-limusine');
+// Route::get('/auto-service-reservation', [App\Http\Controllers\ServiceController::class, 'autoServiceReservation'])->name('auto-service.reservation');
+// Route::post('/set/locale', [App\Http\Controllers\HomepageController::class, 'setLocale'])->name('locale.set');
+// Route::get('/privacy-policy', [App\Http\Controllers\HomepageController::class, 'privacyPolicy'])->name('privacy-policy');
 
 // Back
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function ($user) {
