@@ -1,0 +1,54 @@
+.input-view{
+
+}
+
+.input-view .default-input{
+    background-color: rgba(255,255,255,0.7);
+    border: 0px solid #fff;
+    outline: 0;
+    color: #000;
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+.input-view .default-input::placeholder{
+    color: rgba(0,0,0,0.8);
+}
+
+.input-view .grey-input{
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #d9d9d9;
+    outline: 0;
+    color: #000;
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+.input-view .grey-textarea{
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #d9d9d9;
+    outline: 0;
+    color: #000;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input-view .grey-input::placeholder{
+    color: rgba(0,0,0,0.5);
+}
+
+.input-view .grey-select{
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #d9d9d9;
+    outline: 0;
+    color: #000;
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 50px;
+}

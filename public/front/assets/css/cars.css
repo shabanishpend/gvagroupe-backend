@@ -1,0 +1,29 @@
+.cars{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.cars .car{
+    background-color: #fff;
+    border: 1px solid #efefef;
+    margin-bottom: 1.5rem;
+}
+
+.cars .car .image{
+    width: 100%;
+    height: 300px;
+}
+
+.cars .car .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cars .car .content{
+    padding: 1rem 1rem 1rem 1rem
+}
+
+.cars .car .content .date{
+    font-size: 13px;
+}

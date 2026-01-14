@@ -1,0 +1,82 @@
+/* body{
+    background-color: #fafbfe !important;
+}
+
+.navbar-custom{
+    background-color: #fafbfe !important;
+} */
+
+.navbar-custom{
+    height: 70px;
+    padding-right: 0;
+}
+
+/* .footer{
+    background-color: #fff;
+} */
+
+.left-side-menu,
+body[data-leftbar-theme=dark] .left-side-menu .logo{
+    background-color: #fff !important;
+}
+
+body[data-leftbar-theme=dark] .side-nav .side-nav-link{
+    color: #000 !important;
+}
+
+.side-nav-item.mm-active{
+    background: #f4f4f4 !important;
+}
+
+.left-side-menu .logo-icon{
+    display: flex !important;
+    height: 70px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.full-page-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0,0,0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.full-page-loader .spinner-border {
+    border: 0.25em solid #fff;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+
+.object-cover{
+    object-fit: cover;
+}
+
+.modal-backdrop{
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.note-editor{
+    width: 100%;
+}
+.object-contain{
+    object-fit: contain;
+}
+.object-position-left{
+    object-position: left;
+}
+
+.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
