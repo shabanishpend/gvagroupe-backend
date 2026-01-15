@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('/wlbs', [App\Http\Controllers\WorldLeadingBrandController::class, 'wlbs']);
 // Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'contactSend']);
 
+Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'contactSendApi']);
 Route::post('/newsletter/submit', [App\Http\Controllers\NewsLetterController::class, 'store']);
 Route::get('/buy/cars/models/{mark_id}', [App\Http\Controllers\BuyCarsController::class, 'modelsByMark']);
 Route::post('/buy/cars/filter', [App\Http\Controllers\CarsController::class, 'filter']);
