@@ -21,6 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('/jobs', [App\Http\Controllers\Api\JobController::class, 'jobs']);
 // Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'projects']);
 Route::middleware('api.key')->get('/testimonials', [App\Http\Controllers\TestimonialController::class, 'testimonials']);
+Route::middleware('api.key')->get('/lasted-blogs', [App\Http\Controllers\BlogController::class, 'lastedBlogsApi']);
+Route::middleware('api.key')->get('/blogs', [App\Http\Controllers\BlogController::class, 'blogsApi']);
 // Route::get('/wlbs', [App\Http\Controllers\WorldLeadingBrandController::class, 'wlbs']);
 // Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'contactSend']);
 

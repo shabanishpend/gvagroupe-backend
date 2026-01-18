@@ -228,5 +228,39 @@ class BlogController extends Controller
             File::delete($image_path);
         }
     }
-    
+
+    public function blogsApi(){
+        $blogs = Blog::select('*')
+        ->with(['categories.category', 'user'])
+        ->orderBy('created_at', 'desc')
+        ->paginate(10);
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Blogs récupérés avec succès',
+            'blogs' => $blogs
+        ]);
+    }
+
+    public function lastedBlogsApi(){
+        try {
+            $blogs = Blog::select('*')
+            ->with(['categories.category', 'user'])
+            ->orderBy('created_at', 'desc')
+            ->limit(3)
+            ->get();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Blogs récupérés avec succès',
+                'blogs' => $blogs
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erreur lors de la récupération des blogs',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
 }
