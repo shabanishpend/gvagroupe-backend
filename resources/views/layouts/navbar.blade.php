@@ -7,19 +7,19 @@
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="/admin" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="/front/assets/img/logo.webp" alt="" height="25">
+                            <span class="logo-text">GVAGROUPE</span>
                         </span>
                         <span class="logo-lg">
-                            <img src="/front/assets/img/logo.webp" alt="" height="25">
+                            <span class="logo-text">GVAGROUPE</span>
                         </span>
                     </a>
 
                     <a href="/admin" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="/front/assets/img/logo.webp" alt="" height="25">
+                            <span class="logo-text">GVAGROUPE</span>
                         </span>
                         <span class="logo-lg">
-                            <img src="/front/assets/img/logo.webp" alt="" height="17">
+                            <span class="logo-text">GVAGROUPE</span>
                         </span>
                     </a>
                 </div>
