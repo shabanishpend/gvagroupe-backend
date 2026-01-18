@@ -67,7 +67,7 @@
         <div class="header">
             <div class="w_50 left d_inline" style="vertical-align: top;">
                 <div>
-                    <img class="logo_header" src="https://gvacars.ch/front/assets/img/logo.webp">
+                    <img class="logo_header" src="https://gvagroupe.ch/front/assets/img/logo.webp">
                 </div>
             </div>
      

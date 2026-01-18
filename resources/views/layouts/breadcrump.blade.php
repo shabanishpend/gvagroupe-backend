@@ -1,6 +1,6 @@
 @php
     // Default values
-    $title = $title ?? 'GVACARS';
+    $title = $title ?? 'gvagroupe';
     $items = $items ?? [];
     $showBackButton = $showBackButton ?? false;
     $backRoute = $backRoute ?? null;

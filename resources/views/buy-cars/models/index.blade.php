@@ -15,7 +15,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des modèles', 'route' => 'buy-cars.models'],
                     ['label' => 'Modèles', 'active' => true]

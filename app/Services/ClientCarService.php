@@ -17,7 +17,7 @@ class ClientCarService{
     public function getAllClients(){
         $clients = User::orderBy('id', 'desc')
         ->where('type', 'client')
-        ->where('website', 'gvacars')
+        ->where('website', 'gvagroupe')
         ->get();
 
         return $clients;

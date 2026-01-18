@@ -3,17 +3,17 @@
 
 @section('meta')
 <meta name="description" content="Nous sommes là pour répondre à toutes vos questions, suggestions et demandes, n’hésitez pas à nous écrire." />
-<meta property="og:image" content="https://gvacars.ch/front/assets/img/contact.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/assets/img/contact.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/assets/img/contact.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/assets/img/contact.webp" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="{{ __('messages.contact') }} | GVACARS" />
+<meta property="og:title" content="{{ __('messages.contact') }} | GVAGROUPE" />
 <meta property="og:description" content="Nous sommes là pour répondre à toutes vos questions, suggestions et demandes, n’hésitez pas à nous écrire.">
-<meta property="og:url" content="https://gvacars.ch/contact">
+<meta property="og:url" content="https://gvagroupe.ch/contact">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="{{ __('messages.contact') }} | GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="{{ __('messages.contact') }} | GVAGROUPE" />
 @endsection
 
 @section('links')
@@ -96,7 +96,7 @@
                 <address class="s1">
                     <span><i class="id-color fa fa-map-marker fa-lg"></i>Rue Pré-Bouvier 8, 1214 Satigny</span>
                     <span><i class="id-color fa fa-phone fa-lg"></i><a href="tel:+41762653397">+41762653397</a></span>
-                    <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:contact@gvacars.ch">contact@gvacars.ch</a></span>
+                    <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:contact@gvgroupe.ch">contact@gvgroupe.ch</a></span>
                 </address>
             </div>
 

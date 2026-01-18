@@ -12,7 +12,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'blogs',
                 'items' => [
@@ -42,30 +42,93 @@
                         <input type="file" class="form-control"  accept="image/png, image/jpeg, image/jpg" id="image" name="image" value="{{ $blog->image }}" style="width: fit-content; padding-top: 4px; padding-left: 4px;">
                     </div>
 
-                    <div class="form-group col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
-                        <label for="title">Titre</label>
-                        <input type="text" class="form-control" name="title" id="title" placeholder="Titre" value="{{ $blog->title }}" required>
-                    </div>
-
-                    <div class="form-group col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
                         <label class="w-100" for="categories">Sélectionner les catégories</label>
                         <select class="form-control select2" id="categories" data-toggle="select2" multiple="multiple" name="categories[]" required>
                             @foreach($categories as $categorie)
-                                @foreach($blog->categories as $cate)
-                                    @if($cate->category->id == $categorie->id)
-                                        <option value="{{ $categorie->id }}" selected>{{ $categorie->title }}</option>
-                                    @else
-                                        <option value="{{ $categorie->id }}">{{ $categorie->title }}</option>
-                                    @endif
-                                @endforeach
+                                @php
+                                    $isSelected = false;
+                                    foreach($blog->categories as $cate) {
+                                        if($cate->category->id == $categorie->id) {
+                                            $isSelected = true;
+                                            break;
+                                        }
+                                    }
+                                @endphp
+                                <option value="{{ $categorie->id }}" {{ $isSelected ? 'selected' : '' }}>{{ $categorie->title }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="form-group col-lg-12 mb-3">
-                        <label for="summernote-basic">Contenu</label>
-                        <div class="input-group">
-                            <textarea class="w-100" name="content" id="summernote-basic">{{ $blog->content }}</textarea>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="fr-tab" data-bs-toggle="tab" data-bs-target="#fr" type="button" role="tab">Français <span class="text-danger">*</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="en-tab" data-bs-toggle="tab" data-bs-target="#en" type="button" role="tab">English</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="de-tab" data-bs-toggle="tab" data-bs-target="#de" type="button" role="tab">Deutsch</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sq-tab" data-bs-toggle="tab" data-bs-target="#sq" type="button" role="tab">Shqip</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="it-tab" data-bs-toggle="tab" data-bs-target="#it" type="button" role="tab">Italiano</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane fade show active" id="fr" role="tabpanel">
+                                <div class="form-group mb-3">
+                                    <label for="title_fr">Titre <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="title_fr" id="title_fr" placeholder="Titre" value="{{ old('title_fr', $blog->title_fr ?? $blog->title) }}" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="content_fr">Contenu <span class="text-danger">*</span></label>
+                                    <textarea class="w-100" name="content_fr" id="summernote-fr">{{ old('content_fr', $blog->content_fr ?? $blog->content) }}</textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="en" role="tabpanel">
+                                <div class="form-group mb-3">
+                                    <label for="title_en">Title</label>
+                                    <input type="text" class="form-control" name="title_en" id="title_en" placeholder="Title" value="{{ old('title_en', $blog->title_en) }}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="content_en">Content</label>
+                                    <textarea class="w-100" name="content_en" id="summernote-en">{{ old('content_en', $blog->content_en) }}</textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="de" role="tabpanel">
+                                <div class="form-group mb-3">
+                                    <label for="title_de">Titel</label>
+                                    <input type="text" class="form-control" name="title_de" id="title_de" placeholder="Titel" value="{{ old('title_de', $blog->title_de) }}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="content_de">Inhalt</label>
+                                    <textarea class="w-100" name="content_de" id="summernote-de">{{ old('content_de', $blog->content_de) }}</textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="sq" role="tabpanel">
+                                <div class="form-group mb-3">
+                                    <label for="title_sq">Titulli</label>
+                                    <input type="text" class="form-control" name="title_sq" id="title_sq" placeholder="Titulli" value="{{ old('title_sq', $blog->title_sq) }}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="content_sq">Përmbajtja</label>
+                                    <textarea class="w-100" name="content_sq" id="summernote-sq">{{ old('content_sq', $blog->content_sq) }}</textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="it" role="tabpanel">
+                                <div class="form-group mb-3">
+                                    <label for="title_it">Titolo</label>
+                                    <input type="text" class="form-control" name="title_it" id="title_it" placeholder="Titolo" value="{{ old('title_it', $blog->title_it) }}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="content_it">Contenuto</label>
+                                    <textarea class="w-100" name="content_it" id="summernote-it">{{ old('content_it', $blog->content_it) }}</textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -93,18 +156,27 @@
 <script>
     // init select2
     $('.select2').select2();
-    // Initialize CKEditor for French content
-        ClassicEditor
-        .create(document.querySelector('#summernote-basic'), {
-            ckfinder: {
-                // uploadUrl: '/api/blog/summernote/upload/image?_oken=' + '{{ csrf_token() }}'
-            }
-        })
-        .then(editor => {
-            window.ckeditor_english = editor;
-        })
-        .catch(error => {
-            console.error(error);
+    
+    // Initialize CKEditor for all language content fields
+    const editors = {};
+    const editorIds = ['summernote-fr', 'summernote-en', 'summernote-de', 'summernote-sq', 'summernote-it'];
+    
+    editorIds.forEach(editorId => {
+        const element = document.querySelector('#' + editorId);
+        if(element) {
+            ClassicEditor
+                .create(element, {
+                    ckfinder: {
+                        // uploadUrl: '/api/blog/summernote/upload/image?_oken=' + '{{ csrf_token() }}'
+                    }
+                })
+                .then(editor => {
+                    editors[editorId] = editor;
+                })
+                .catch(error => {
+                    console.error('Error initializing editor for ' + editorId + ':', error);
+                });
+        }
     });
 </script>
 @endsection

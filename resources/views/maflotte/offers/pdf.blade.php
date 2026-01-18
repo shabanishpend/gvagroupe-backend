@@ -94,7 +94,7 @@
                 <div>
                     <img 
                         class="logo_header" 
-                        src="https://gvacars.ch/front/assets/images/logo-no-bg.png" 
+                        src="https://gvagroupe.ch/front/assets/images/logo-no-bg.png" 
                     >
                 </div>
             </div>

@@ -19,7 +19,6 @@ class TestimonialController extends Controller
 
     public function getTestimonials(){
         $testimonials = Testimonial::orderBy('created_at','desc')
-        ->limit(3)
         ->get();
 
         return $testimonials;
@@ -58,15 +57,25 @@ class TestimonialController extends Controller
     public function update(Request $request){
 
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'title_fr' => 'required',
+            'description_fr' => 'required',
             'position' => 'required',
             'full_name' => 'required',
         ]);
 
         $fields = [
-            'title' => $request->title,
-            'description' => $request->description,
+            'title' => $request->title ?? $request->title_fr,
+            'title_fr' => $request->title_fr,
+            'title_en' => $request->title_en,
+            'title_de' => $request->title_de,
+            'title_sq' => $request->title_sq,
+            'title_it' => $request->title_it,
+            'description' => $request->description ?? $request->description_fr,
+            'description_fr' => $request->description_fr,
+            'description_en' => $request->description_en,
+            'description_de' => $request->description_de,
+            'description_sq' => $request->description_sq,
+            'description_it' => $request->description_it,
             'user_full_name' => $request->full_name,
             'user_position' => $request->position
         ];
@@ -82,7 +91,7 @@ class TestimonialController extends Controller
             if($testimonial){
                 $this->saveOrUpdateImage($request->image, $testimonial, $request->type);
                 $data = [
-                    "title" => 'Created Testimonial: '.$testimonial->title,
+                    "title" => 'Created Testimonial: '.($testimonial->title_fr ?? $testimonial->title),
                     "description" => Auth::user()->name.' '.Auth::user()->surname.' a créé un témoignage !',
                     "user_id" => Auth::user()->id,
                     'type' => 'testimonial_create'
@@ -99,10 +108,10 @@ class TestimonialController extends Controller
             $testimonial = Testimonial::where('id', $request->testimonial_id)->first();
             $update = $testimonial->update($fields);
 
-            if($update > 0){
+            if($update){
                 $this->saveOrUpdateImage($request->image, $testimonial, $request->type);
                 $data = [
-                    "title" => 'Updated Testimonial: '.$testimonial->title,
+                    "title" => 'Updated Testimonial: '.($testimonial->title_fr ?? $testimonial->title),
                     "description" => Auth::user()->name.' '.Auth::user()->surname.' a mis à jour ce témoignage !',
                     "user_id" => Auth::user()->id,
                     'type' => 'testimonial_update'
@@ -143,14 +152,23 @@ class TestimonialController extends Controller
     public function delete(Request $request){
         $id = $request->testimonial_id;
 
-        $testimonial = Testimonial::where('id', $id)
-        ->first();
+        if(!$id){
+            return redirect()->back()->withInput()->withErrors(['ID de témoignage manquant !']);
+        }
+
+        $testimonial = Testimonial::where('id', $id)->first();
+        
+        if(!$testimonial){
+            return redirect()->back()->withInput()->withErrors(['Témoignage introuvable !']);
+        }
+
+        $title = $testimonial->title_fr ?? $testimonial->title;
         $delete = $testimonial->delete();
 
-        if($delete > 0){
+        if($delete){
             $this->deleteImageProject($testimonial);
             $data = [
-                "title" => 'Deleted Testimonial: '.$testimonial->title,
+                "title" => 'Deleted Testimonial: '.$title,
                 "description" => Auth::user()->name.' '.Auth::user()->surname.' a supprimé ce témoignage !',
                 "user_id" => Auth::user()->id,
                 'type' => 'testimonial_delete'

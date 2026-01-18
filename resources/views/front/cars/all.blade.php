@@ -3,17 +3,17 @@
 
 @section('meta')
 <meta name="description" content="Découvrez votre prochaine voiture de rêve chez nous. Large sélection de véhicules neufs et d'occasion, des modèles fiables et abordables. Trouvez la voiture parfaite pour votre style de vie et votre budget. Faites un essai routier dès aujourd'hui !" />
-<meta property="og:image" content="https://gvacars.ch/front/images/background/2.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/images/background/2.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/images/background/2.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/images/background/2.webp" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="{{ __('messages.buy_cars') }} | GVACARS" />
+<meta property="og:title" content="{{ __('messages.buy_cars') }} | GVAGROUPE" />
 <meta property="og:description" content="Découvrez votre prochaine voiture de rêve chez nous. Large sélection de véhicules neufs et d'occasion, des modèles fiables et abordables. Trouvez la voiture parfaite pour votre style de vie et votre budget. Faites un essai routier dès aujourd'hui !">
-<meta property="og:url" content="https://gvacars.ch/cars">
+<meta property="og:url" content="https://gvagroupe.ch/cars">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="{{ __('messages.buy_cars') }} | GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="{{ __('messages.buy_cars') }} | GVAGROUPE" />
 @endsection
 
 @section('links')

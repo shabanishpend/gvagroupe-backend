@@ -10,17 +10,20 @@ use Auth;
 use File;
 use App\Services\ActivityService;
 use App\Services\UserService;
+use App\Services\ImageService;
 
 class BlogController extends Controller
 {
 
     private $activityService;
     private $userService;
+    private $imageService;
 
-    public function __construct(ActivityService $activityService, UserService $userService)
+    public function __construct(ActivityService $activityService, UserService $userService, ImageService $imageService)
     {
         $this->activityService = $activityService;
         $this->userService = $userService;
+        $this->imageService = $imageService;
     }
 
     public function index(){
@@ -61,21 +64,29 @@ class BlogController extends Controller
     public function update(Request $request){
 
         $request->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title_fr' => 'required',
+            'content_fr' => 'required',
             'categories' => 'required',
         ]);
 
-        $title = $request->title;
-        $content = $request->content;
         $categories = $request->categories;
         $user_id = Auth::user()->id;
         $type = $request->type;
 
         $fields = [
-            "title" => $title,
             'user_id' => $user_id,
-            "content" => $content,
+            'title' => $request->title ?? $request->title_fr,
+            'title_fr' => $request->title_fr,
+            'title_en' => $request->title_en,
+            'title_de' => $request->title_de,
+            'title_sq' => $request->title_sq,
+            'title_it' => $request->title_it,
+            'content' => $request->content ?? $request->content_fr,
+            'content_fr' => $request->content_fr,
+            'content_en' => $request->content_en,
+            'content_de' => $request->content_de,
+            'content_sq' => $request->content_sq,
+            'content_it' => $request->content_it,
         ];
 
         if($type == 'create'){
@@ -127,19 +138,43 @@ class BlogController extends Controller
         if(isset($image)){
             $file = $image->getClientOriginalName();
             $filename = pathinfo($file, PATHINFO_FILENAME);
-            $imageName = $blog->id.'-'.$filename.'.webp'; 
+            $extension = $image->getClientOriginalExtension();
+            $tempImageName = $blog->id.'-'.$filename.'.'.$extension;
+            $finalImageName = $blog->id.'-'.$filename.'.webp';
+            $tempImagePath = public_path('back/img/blogs/'.$tempImageName);
+            $finalImagePath = public_path('back/img/blogs/'.$finalImageName);
 
             if($type == 'create'){
-                $image->move(public_path('back/img/blogs'), $imageName);
+                // Save original image temporarily
+                $image->move(public_path('back/img/blogs'), $tempImageName);
+                // Resize to 5:4 aspect ratio and convert to webp (default width 1000px)
+                $this->imageService->resizeToAspectRatio54($tempImagePath, 1000, 'image/webp');
+                // Update path if webp file was created
+                if(File::exists($finalImagePath)){
+                    $imageName = $finalImageName;
+                } else {
+                    $imageName = $tempImageName;
+                }
             }
             
             if($type == 'edit'){
-                if($blog->image != $imageName){
-                    $image_path = 'back/img/blogs/'.$imageName;
-                    if(File::exists($image_path)) {
-                        File::delete($image_path);
+                if($blog->image != $finalImageName){
+                    $oldImagePath = 'back/img/blogs/'.$blog->image;
+                    if(File::exists($oldImagePath)) {
+                        File::delete($oldImagePath);
                     }
-                    $image->move(public_path('back/img/blogs'), $imageName);
+                    // Save original image temporarily
+                    $image->move(public_path('back/img/blogs'), $tempImageName);
+                    // Resize to 5:4 aspect ratio and convert to webp (default width 1000px)
+                    $this->imageService->resizeToAspectRatio54($tempImagePath, 1000, 'image/webp');
+                    // Update path if webp file was created
+                    if(File::exists($finalImagePath)){
+                        $imageName = $finalImageName;
+                    } else {
+                        $imageName = $tempImageName;
+                    }
+                } else {
+                    $imageName = $blog->image;
                 }
             }
 

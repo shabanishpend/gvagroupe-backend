@@ -20,7 +20,7 @@
                 <div class="info">
                   <i class="bi bi-envelope"></i>
                   <p class="h4">E-mail:</p>
-                  <p>contact@gvacars.ch</p>
+                  <p>contact@gvgroupe.ch</p>
                 </div>
               </div>
               <div class="col-lg-6">

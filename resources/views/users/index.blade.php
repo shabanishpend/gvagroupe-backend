@@ -17,7 +17,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des utilisateurs', 'route' => 'users'],
                     ['label' => 'Utilisateurs', 'active' => true]

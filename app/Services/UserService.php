@@ -100,7 +100,7 @@ class UserService{
         }
     }
 
-    public function getUpdate($request, $website = 'gvacars'){
+    public function getUpdate($request, $website = 'gvagroupe'){
         $fields = [
             'name' => $request->name,
             'surname' => $request->surname,

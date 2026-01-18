@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta name="title" content="GVACARS">
+        <meta name="title" content="GVAGROUPE">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         @yield('meta')
-        <title>@yield('title') | GVACARS</title>
+        <title>@yield('title') | GVAGROUPE</title>
         <link rel="shortcut icon" href="/front/assets/img/favicon.webp">
         <!-- CSS Files
         ================================================== -->

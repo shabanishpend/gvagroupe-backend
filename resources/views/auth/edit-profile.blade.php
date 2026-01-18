@@ -13,10 +13,10 @@
         <div class="container-fluid">
 
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'dashboard',
-                'backRouteParams' => [request()->route('website') ?? 'gvacars'],
+                'backRouteParams' => [request()->route('website') ?? 'gvagroupe'],
                 'items' => [
                     ['label' => 'Profil', 'route' => 'profile'],
                     ['label' => 'Modifier le profil', 'active' => true]

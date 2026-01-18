@@ -28,12 +28,12 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'bonLivrasion',
-                'backRouteParams' => [$website ?? 'gvacars'],
+                'backRouteParams' => [$website ?? 'gvagroupe'],
                 'items' => [
-                    ['label' => 'Gestion des bon de livraison', 'route' => 'bonLivrasion', 'routeParams' => [$website ?? 'gvacars']],
+                    ['label' => 'Gestion des bon de livraison', 'route' => 'bonLivrasion', 'routeParams' => [$website ?? 'gvagroupe']],
                     ['label' => 'Modifier un bon de livraison ' . $bon_livrasion->id, 'active' => true]
                 ]
             ])    

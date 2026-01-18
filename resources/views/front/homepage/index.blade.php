@@ -9,18 +9,18 @@
 
 @section('meta')
 <meta name="description" content="Bienvenue sur notre plateforme automobile de premier ordre, votre destination ultime pour tout ce qui concerne les voitures ! Des conseils d'entretien automobile d'experts et des services aux options de vente de voitures sans tracas et de location de voitures haut de gamme, nous avons tout ce qu'il vous faut." />
-<meta property="og:image" content="https://gvacars.ch/front/assets/img/page-thumbnail.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/assets/img/page-thumbnail.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/assets/img/page-thumbnail.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/assets/img/page-thumbnail.webp" />
 <meta property="og:image:alt" content="Page Preview" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="GVACARS">
+<meta property="og:title" content="GVAGROUPE">
 <meta property="og:description" content="Bienvenue sur notre plateforme automobile de premier ordre, votre destination ultime pour tout ce qui concerne les voitures ! Des conseils d'entretien automobile d'experts et des services aux options de vente de voitures sans tracas et de location de voitures haut de gamme, nous avons tout ce qu'il vous faut.">
-<meta property="og:url" content="https://gvacars.ch">
+<meta property="og:url" content="https://gvgroupe.ch">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="GVAGROUPE" />
 @endsection
 
 @section('content')

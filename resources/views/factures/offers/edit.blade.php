@@ -156,12 +156,12 @@
 <div class="container-fluid">  
 
     @include('layouts.breadcrump', [
-        'title' => $website == 'maflotte' ? 'Maflotte' : 'GVACARS',
+        'title' => $website == 'maflotte' ? 'Maflotte' : 'gvagroupe',
         'showBackButton' => true,
         'backRoute' => 'offres',
-        'backRouteParams' => [$website ?? 'gvacars'],
+        'backRouteParams' => [$website ?? 'gvagroupe'],
         'items' => [
-            ['label' => 'Gestion des offres', 'route' => 'offres', 'routeParams' => [$website ?? 'gvacars']],
+            ['label' => 'Gestion des offres', 'route' => 'offres', 'routeParams' => [$website ?? 'gvagroupe']],
             ['label' => 'Modifier un Offre', 'active' => true]
         ]
     ])
@@ -208,7 +208,7 @@
                     @endforeach
                 </select>
 
-                @if($website == 'gvacars')
+                @if($website == 'gvagroupe')
                 <select class="form-control select2 select" data-toggle="select2" name="car" id="cars" data-placeholder="Sélectionner un voiture">
              
                 </select>
@@ -277,7 +277,7 @@
 
         <h2 class="title color-black">Offre</h2>
 
-        @if($website == 'gvacars')
+        @if($website == 'gvagroupe')
         <div class="mb-1">
             Masquer les détails de la voiture
             <select name="hide_car_details" id="hide_car_details">
@@ -289,7 +289,7 @@
         <input type="hidden" name="hide_car_details" value="1" />
         @endif 
 
-        @if($website == 'gvacars')
+        @if($website == 'gvagroupe')
         <div id="car_details">
             <div class="auto_detail_grid d_inline">
                 <div class="auto_detail">
@@ -409,7 +409,7 @@
             $isDate = $date instanceof \Carbon\Carbon;
         @endphp
 
-        @if($website == 'gvacars')
+        @if($website == 'gvagroupe')
         <p class="intervenation">Intervention le 
         @if($isDate)
             <input type="date" style="min-width: 112px;" class="font_bold" placeholder="Écrire date" name="intervenation_date" value="{{ \Carbon\Carbon::parse($facture->intervenation_date)->format('Y-m-d') }}" />
@@ -956,7 +956,7 @@ $(document).ready(function() {
 });
 </script>
 <script>
-    @if($website == 'gvacars')
+    @if($website == 'gvagroupe')
         @if($facture->hide_car_details == 0)
             document.getElementById('car_details').style.display = 'none';
         @endif

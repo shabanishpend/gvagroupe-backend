@@ -7,7 +7,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'offres',
                 'backRouteParams' => [$website ?? 'maflotte'],
@@ -128,7 +128,7 @@ Date et Signature autorisée
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
                                 <label for="footer_text">Footer Text</label>
                                 <div class="input-group w-100">
-                                    <textarea rows="7" class="form-control" name="footer_text">Lu et approuvé GVACARS (MAFLOTTE), Impasse du Tilleul 12, 1510 Moudon, contact@maflotte.ch</textarea>
+                                    <textarea rows="7" class="form-control" name="footer_text">Lu et approuvé GVAGROUPE (MAFLOTTE), Impasse du Tilleul 12, 1510 Moudon, contact@maflotte.ch</textarea>
                                 </div>
                             </div>
 

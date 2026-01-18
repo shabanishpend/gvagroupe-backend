@@ -8,7 +8,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'auto-rental.index',
                 'items' => [

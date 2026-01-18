@@ -18,7 +18,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des emplois', 'route' => 'jobs.categories'],
                     ['label' => 'Catégories d\'emploi', 'active' => true]

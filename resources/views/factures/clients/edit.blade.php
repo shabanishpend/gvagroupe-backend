@@ -11,12 +11,12 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'factures.clients',
-                'backRouteParams' => [$website ?? 'gvacars'],
+                'backRouteParams' => [$website ?? 'gvagroupe'],
                 'items' => [
-                    ['label' => 'Gestion des clients', 'route' => 'factures.clients', 'routeParams' => [$website ?? 'gvacars']],
+                    ['label' => 'Gestion des clients', 'route' => 'factures.clients', 'routeParams' => [$website ?? 'gvagroupe']],
                     ['label' => 'Clients', 'active' => true]
                 ]
             ])    

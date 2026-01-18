@@ -3,17 +3,17 @@
 
 @section('meta')
 <meta name="description" content="Entrez dans un monde d'élégance et de commodité grâce à notre service de voitures de première classe." />
-<meta property="og:image" content="https://gvacars.ch/front/images/background/2.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/images/background/2.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/images/background/2.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/images/background/2.webp" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="GVACARS">
+<meta property="og:title" content="GVAGROUPE">
 <meta property="og:description" content="Entrez dans un monde d'élégance et de commodité grâce à notre service de voitures de première classe.">
-<meta property="og:url" content="https://gvacars.ch/auto-rental">
+<meta property="og:url" content="https://gvagroupe.ch/auto-rental">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="GVAGROUPE" />
 @endsection
 
 @section('links')

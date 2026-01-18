@@ -5,7 +5,7 @@
     <!-- LOGO -->
     <div class="navbar-brand-box">
         <!-- Dark Logo-->
-        <a href="{{ route('dashboard', ['website' => 'gvacars']) }}" class="logo logo-dark">
+        <a href="{{ route('dashboard', ['website' => 'gvagroupe']) }}" class="logo logo-dark">
             <span class="logo-sm">
                 <img src="/front/assets/img/logo.webp" alt="" height="22">
             </span>
@@ -14,7 +14,7 @@
             </span>
         </a>
         <!-- Light Logo-->
-        <a href="{{ route('dashboard', ['website' => 'gvacars']) }}" class="logo logo-light">
+        <a href="{{ route('dashboard', ['website' => 'gvagroupe']) }}" class="logo logo-light">
             <span class="logo-sm">
                 <img src="/front/assets/img/logo.webp" alt="" height="22">
             </span>
@@ -67,7 +67,7 @@
                     <div class="collapse menu-dropdown" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('dashboard', ['website' => 'gvacars']) }}" class="nav-link {{ request()->is('admin/dashboard/gvacars*') ? 'active' : '' }}" data-key="t-analytics"> GVACARS </a>
+                                <a href="{{ route('dashboard', ['website' => 'gvagroupe']) }}" class="nav-link {{ request()->is('admin/dashboard/gvagroupe*') ? 'active' : '' }}" data-key="t-analytics"> GVAGROUPE </a>    
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('dashboard', ['website' => 'maflotte']) }}" class="nav-link {{ request()->is('admin/dashboard/maflotte*') ? 'active' : '' }}" data-key="t-crm"> MAFLOTTE </a>
@@ -136,25 +136,25 @@
 
                 @if($userService->isAdmin() || $userService->isAccountant())
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->is('admin/factures/gvacars', 'admin/raports*', 'admin/factures/clients/create/gvacars', 'admin/factures/clients/edit/*/gvacars') ? 'active' : '' }}" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="ri-file-text-line"></i> <span data-key="t-layouts">GVACARS</span>
+                    <a class="nav-link menu-link {{ request()->is('admin/factures/gvagroupe', 'admin/raports*', 'admin/factures/clients/create/gvagroupe', 'admin/factures/clients/edit/*/gvagroupe') ? 'active' : '' }}" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                            <i class="ri-file-text-line"></i> <span data-key="t-layouts">GVAGROUPE</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('factures.clients', ['gvacars']) }}" class="nav-link {{ request()->is('admin/factures/clients/gvacars*', 'admin/factures/clients/gvarcars/*') ? 'active' : '' }}" data-key="t-horizontal">Clients</a>
+                                <a href="{{ route('factures.clients', ['gvagroupe']) }}" class="nav-link {{ request()->is('admin/factures/clients/gvagroupe*', 'admin/factures/clients/gvagroupe/*') ? 'active' : '' }}" data-key="t-horizontal">Clients</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('clients.cars') }}" class="nav-link {{ request()->is('admin/factures/clients/cars*', 'admin/factures/clients/cars/*') ? 'active' : '' }}" data-key="t-detached">Voitures Clients</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('factures', ['gvacars']) }}" class="nav-link {{ request()->is('admin/factures/gvacars', 'admin/factures/create/gvacars', 'admin/factures/edit/*/gvacars', 'admin/factures/edit*/gvacars') ? 'active' : '' }}" data-key="t-detached">Factures</a>
+                                <a href="{{ route('factures', ['gvagroupe']) }}" class="nav-link {{ request()->is('admin/factures/gvagroupe', 'admin/factures/create/gvagroupe', 'admin/factures/edit/*/gvagroupe', 'admin/factures/edit*/gvagroupe') ? 'active' : '' }}" data-key="t-detached">Factures</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('offers') }}" class="nav-link {{ request()->is('admin/offers', 'admin/offers/create', 'admin/offers/edit/*', 'admin/offers/edit*') ? 'active' : '' }}" data-key="t-detached">Offres</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('rapports.factures.website', ['gvacars']) }}" class="nav-link {{ request()->is('admin/raports') ? 'active' : '' }}" data-key="t-detached">Rapports</a>
+                                <a href="{{ route('rapports.factures.website', ['gvagroupe']) }}" class="nav-link {{ request()->is('admin/raports') ? 'active' : '' }}" data-key="t-detached">Rapports</a>
                             </li>
                         </ul>
                     </div>

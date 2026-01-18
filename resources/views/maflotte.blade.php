@@ -40,7 +40,7 @@
     <div class="page-content">
         <div class="container-fluid">
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Tableau de bord', 'route' => 'dashboard', 'routeParams' => [request()->route('website') ?? 'maflotte'], 'active' => true]
                 ]
@@ -262,7 +262,7 @@
                                                     <div class="text-nowrap">CHF {{ $facture->total_ttc }}</div>
                                                 </td>
                                                 <td class="table-action" style="width: 90px;text-align: right;">
-                                                    <a href="{{ route('factures.edit', [$facture->id, 'gvacars']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
+                                                    <a href="{{ route('factures.edit', [$facture->id, 'gvagroupe']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach

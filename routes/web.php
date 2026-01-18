@@ -32,7 +32,7 @@ Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->nam
 // Route::get('/privacy-policy', [App\Http\Controllers\HomepageController::class, 'privacyPolicy'])->name('privacy-policy');
 
 // Back
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function ($user) {
+Route::group(['prefix' => '', 'middleware' => ['auth']], function ($user) {
 
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard/{website}', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');

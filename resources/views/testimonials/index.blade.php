@@ -16,7 +16,7 @@
     <div class="container-fluid">
                    
         @include('layouts.breadcrump', [
-            'title' => 'GVACARS',
+            'title' => 'gvagroupe',
             'items' => [
                 ['label' => 'Gestion des témoignages', 'route' => 'testimonials'],
                 ['label' => 'Témoignages', 'active' => true]
@@ -62,7 +62,7 @@
                         <td style="vertical-align: middle;">
                             <div>
                                 <a href="/testimonials/edit/{{ $testimonial->id }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                <a href="javascript: void(0);" class="action-icon"  data-toggle="modal" data-target="#fill-danger-modal" onclick="onDelete({{ $testimonial->id }})"> <i class="mdi mdi-delete"></i></a>
+                                <a href="javascript: void(0);" class="action-icon"  data-bs-toggle="modal" data-bs-target="#fill-danger-modal" onclick="onDelete({{ $testimonial->id }})"> <i class="mdi mdi-delete"></i></a>
                             </div>
                         </td>
                     </tr>
@@ -76,23 +76,28 @@
     </div>
 </div>  
 </div>
- <!-- Danger Filled Modal -->
- <div id="fill-danger-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="fill-danger-modalLabel" aria-hidden="true">
+<div id="fill-danger-modal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
-        <div class="modal-content modal-filled bg-danger">
+        <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="fill-danger-modalLabel">Supprimer le témoignage</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h5 class="modal-title" id="myModalLabel">Suppression d'un témoignage</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Est-ce que vous êtes sûr de vouloir supprimer ?</p>
+                <h5 class="fs-15">
+                    Êtes-vous sûr de vouloir supprimer ce témoignage ?
+                </h5>
+                <p class="text-muted">Cette action est irréversible.</p>
             </div>
-            <form action="{{ route('testimonials.delete') }}" method="POST" class="modal-footer">
-                @csrf
-                <input type="hidden" name="testimonial_id" value="" id="testimonial_id" />
-                <button type="button" class="btn btn-light" data-dismiss="modal">Non</button>
-                <button type="submit" class="btn btn-outline-light">Oui</button>
-            </form>
+            <div class="modal-footer">
+                <form action="{{ route('testimonials.delete') }}" method="POST">   
+                    @csrf
+                    <input type="hidden" name="testimonial_id" value="" id="testimonial_id" />
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary ">Supprimer</button>
+                </form>
+            </div>
+
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

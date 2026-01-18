@@ -92,7 +92,7 @@
                 <div>
                     <img 
                         class="logo_header" 
-                        src="https://gvacars.ch/front/assets/images/logo-no-bg.png" 
+                        src="https://gvagroupe.ch/front/assets/images/logo-no-bg.png" 
                     >
                 </div>
             </div>
@@ -159,7 +159,7 @@
             <tr>
                 <td style="border: 0.5px solid #000000; padding: 5px 5px 5px 5px; text-align: left; background-color: #f1f1f1;"></td>
                 <td colspan="2" style="border: 0.5px solid #000000; padding: 5px 5px 5px 5px; text-align: left; background-color: #fff; font-size: 14px;">
-                    <em>Selon nos conditions générales de vente et notre tarification des services. Les marchandises commandées ne sont pas remboursées. Les appareils sont la propriété de GVACARS et doivent être retournés une fois le contrat terminé.</em>
+                    <em>Selon nos conditions générales de vente et notre tarification des services. Les marchandises commandées ne sont pas remboursées. Les appareils sont la propriété de GVGROUPE et doivent être retournés une fois le contrat terminé.</em>
                 </td>
             </tr>
         </table>
@@ -170,7 +170,7 @@
             <p style="line-height: 18px;font-size: 18px;margin-top: 1.5rem !important;">SIGNATURE :</p>
         </div>
 
-        <p style="text-align: center;color: #646464; font-size: 14px; margin-top: 4rem !important;">GVACARS (MAFLOTTE), Impasse du Tilleul 12, 1510 Moudon, contact@maflotte.ch, www.maflotte.ch</p>
+        <p style="text-align: center;color: #646464; font-size: 14px; margin-top: 4rem !important;">GVGROUPE (MAFLOTTE), Impasse du Tilleul 12, 1510 Moudon, contact@maflotte.ch, www.maflotte.ch</p>
 
     </div>
 

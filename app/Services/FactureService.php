@@ -30,7 +30,7 @@ class FactureService{
         // Create a new Spreadsheet object
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
-        $factures = $this->getFacturesRaports($request->excelDateFrom, $request->excelDateTo, 'gvacars', $request->excelClient);
+        $factures = $this->getFacturesRaports($request->excelDateFrom, $request->excelDateTo, 'gvagroupe', $request->excelClient);
         $total_facture_price = $this->getTotalPriceByRange($factures);
         $total_cost_price = $this->getTotalPriceByRangeDepenses($factures);
 
@@ -247,14 +247,14 @@ class FactureService{
     public function getFacturesRaports($from, $to, $website, $client_id) {
         // Retrieve factures between the specified dates
         $factures = Facture::whereNull('deleted_at')
-            ->whereIn('website', ['gvacars', 'maflotte'])
+            ->whereIn('website', ['gvagroupe', 'maflotte'])
             ->where('type_of_facture', 'facture')
             ->with(['items', 'client', 'user', 'car'])
             ->orderBy('factured_date', 'desc');
     
         // Retrieve depenses between the specified dates
         $depenses = Costs::whereNull('deleted_at')
-            ->whereIn('website', ['gvacars', 'maflotte'])
+            ->whereIn('website', ['gvagroupe', 'maflotte'])
             ->with(['categoryAtached.subCategory'])
             ->orderBy('payed_date', 'desc');
     
@@ -405,7 +405,7 @@ class FactureService{
     public function sendFactureToCliend($request){
         $facture = $this->getFactureById($request->id);
         $user = auth()->user();
-        $website = $facture->website ?? 'gvacars';
+        $website = $facture->website ?? 'gvagroupe';
 
         $fields = [
             "email" => $facture->email,
@@ -504,7 +504,7 @@ class FactureService{
         $factureName = $facture->name ?? '';
         $interventionDate = $data['intervenation_date'] ?? $data['factured_date'] ?? '';
         $formattedDate = $interventionDate ? date('d.m.Y', strtotime($interventionDate)) : '';
-        $website = $facture->website ?? 'gvacars';
+        $website = $facture->website ?? 'gvagroupe';
         
         $content = "Bonjour {$clientName} {$clientSurname},\n\n";
         $content .= "J'espère que vous allez bien. Veuillez trouver ci-joint la facture numéro {$factureName} concernant les services fournis en {$formattedDate}. ";
@@ -513,9 +513,9 @@ class FactureService{
         $content .= "Nous vous remercions de votre confiance et restons à votre disposition pour toute information complémentaire.\n\n";
         $content .= "Cordialement,\n";
         
-        if($website == 'gvacars') {
-            $content .= "GVACARS\n";
-            $content .= "contact@gvacars.ch\n";
+        if($website == 'gvagroupe') {
+            $content .= "GVGROUPE\n";
+            $content .= "contact@gvgroupe.ch\n";
             $content .= "076/265.33.97\n";
         } else {
             $content .= "MAFLOTTE\n";
@@ -539,9 +539,9 @@ class FactureService{
     public function getOffersCreate(){
         return view('factures.offers.create')
         ->with([
-            'clients' => $this->getClients('gvacars'),
+            'clients' => $this->getClients('gvagroupe'),
             'type_of_facture' => 'offers',
-            'website' => 'gvacars'
+            'website' => 'gvagroupe'
         ]);
     }
 
@@ -553,9 +553,9 @@ class FactureService{
         return view('factures.offers.edit')
         ->with([
             'facture' => $facture,
-            'clients' => $this->getClients('gvacars'),
+            'clients' => $this->getClients('gvagroupe'),
             'type_of_facture' => 'offers',
-               'website' => 'gvacars'
+               'website' => 'gvagroupe'
         ]);
     }
 
@@ -582,7 +582,7 @@ class FactureService{
     }
 
     public function getFacturesRaportsPreview($request){
-        $factures = $this->getFacturesRaports($request->dateFrom, $request->dateTo, 'gvacars', $request->client);
+        $factures = $this->getFacturesRaports($request->dateFrom, $request->dateTo, 'gvagroupe', $request->client);
         $data = [
             'factures' => $factures,
             'total_price' => $this->getTotalPriceByRange($factures),
@@ -598,7 +598,7 @@ class FactureService{
     }
 
     public function getFacturesRaportsDownload($request){
-        $factures = $this->getFacturesRaports($request->dateFrom, $request->dateTo, 'gvacars', $request->client);
+        $factures = $this->getFacturesRaports($request->dateFrom, $request->dateTo, 'gvagroupe', $request->client);
         $data = [
             'factures' => $factures,
             'total_price' => $this->getTotalPriceByRange($factures),

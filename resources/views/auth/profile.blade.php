@@ -203,7 +203,7 @@
                                                             </div>
                                                             <div class="flex-grow-1 overflow-hidden">
                                                                 <p class="mb-1">Plateforme :</p>
-                                                                <a href="{{ env('APP_URL') }}" class="fw-semibold">GVACARS</a>
+                                                                <a href="{{ env('APP_URL') }}" class="fw-semibold">GVGROUPE</a>
                                                             </div>
                                                         </div>
                                                     </div>

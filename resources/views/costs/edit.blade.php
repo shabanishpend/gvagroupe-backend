@@ -12,7 +12,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'costs',
                 'items' => [
@@ -152,7 +152,7 @@
         };
 
         // Send the AJAX request
-        fetch(`{{ route('costs.sub.categories.api', ['gvacars']) }}`, {
+        fetch(`{{ route('costs.sub.categories.api', ['gvagroupe']) }}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

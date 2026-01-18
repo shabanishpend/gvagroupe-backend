@@ -3,17 +3,17 @@
 
 @section('meta')
 <meta name="description" content="Service d'Entretien Automobile de Qualité: Confiez-nous votre voiture pour un entretien de qualité supérieure. De l'entretien courant aux réparations complexes, nos techniciens qualifiés garantissent une performance optimale. Prenez rendez-vous dès maintenant !" />
-<meta property="og:image" content="https://gvacars.ch/front/assets/img/car-service.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/assets/img/car-service.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/assets/img/car-service.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/assets/img/car-service.webp" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="{{ __('messages.reservation_service') }} | GVACARS" />
+<meta property="og:title" content="{{ __('messages.reservation_service') }} | GVAGROUPE" />
 <meta property="og:description" content="Service d'Entretien Automobile de Qualité: Confiez-nous votre voiture pour un entretien de qualité supérieure. De l'entretien courant aux réparations complexes, nos techniciens qualifiés garantissent une performance optimale. Prenez rendez-vous dès maintenant !">
-<meta property="og:url" content="https://gvacars.ch/auto-service-reservation">
+<meta property="og:url" content="https://gvagroupe.ch/auto-service-reservation">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="{{ __('messages.reservation_service') }} | GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="{{ __('messages.reservation_service') }} | GVAGROUPE" />
 @endsection
 
 @section('links')

@@ -4,17 +4,17 @@
 
 @section('meta')
 <meta name="description" content="Entrez dans un monde d'élégance et de commodité grâce à notre service de voitures de première classe. Nous veillons à ce que tous vos besoins soient satisfaits pendant votre voyage vers votre destination. Installez-vous confortablement, détendez-vous et laissez-vous tenter par un voyage où le luxe côtoie la fluidité. Votre expérience exceptionnelle commence dès que vous entrez dans le véhicule." />
-<meta property="og:image" content="https://gvacars.ch/front/assets/img/open-door.webp">
-<meta property="og:image:secure_url" content="https://gvacars.ch/front/assets/img/open-door.webp" />
+<meta property="og:image" content="https://gvagroupe.ch/front/assets/img/open-door.webp">
+<meta property="og:image:secure_url" content="https://gvagroupe.ch/front/assets/img/open-door.webp" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="{{ __('messages.service_limusine') }} | GVACARS" />
+<meta property="og:title" content="{{ __('messages.service_limusine') }} | GVAGROUPE" />
 <meta property="og:description" content="Entrez dans un monde d'élégance et de commodité grâce à notre service de voitures de première classe. Nous veillons à ce que tous vos besoins soient satisfaits pendant votre voyage vers votre destination. Installez-vous confortablement, détendez-vous et laissez-vous tenter par un voyage où le luxe côtoie la fluidité. Votre expérience exceptionnelle commence dès que vous entrez dans le véhicule.">
-<meta property="og:url" content="https://gvacars.ch/service-limusine">
+<meta property="og:url" content="https://gvagroupe.ch/service-limusine">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="GVACARS" />
-<meta property="twitter:title" content="{{ __('messages.service_limusine') }} | GVACARS" />
+<meta name="author" content="GVAGROUPE" />
+<meta property="twitter:title" content="{{ __('messages.service_limusine') }} | GVAGROUPE" />
 @endsection
 
 @section('links')

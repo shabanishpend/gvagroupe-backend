@@ -12,9 +12,19 @@ class Blog extends Model
     public $table = 'blogs';
     protected $fillable = [
         'title',
+        'title_fr',
+        'title_en',
+        'title_de',
+        'title_sq',
+        'title_it',
         'image',
         'user_id',
         'content',
+        'content_fr',
+        'content_en',
+        'content_de',
+        'content_sq',
+        'content_it',
         'created_at',
         'updated_at'
     ];

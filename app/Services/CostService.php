@@ -97,7 +97,7 @@ class CostService{
         
         $fields = [
             'catgory_id' => $request->category,
-            'website'=> "gvacars",
+            'website'=> "gvgroupe",
             'total_price' => $request->total_price,
             'payed_date' => $request->payed_date,
             'status' => 0,

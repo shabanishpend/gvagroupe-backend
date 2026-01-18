@@ -39,13 +39,13 @@
     @endif
     <div style="background-color: white; width: 11px; height: 11px;position: absolute; right: -6.5px;top:10px;">
             <img 
-                src="https://gvacars.ch/front/images/scissors.png"
+                src="https://gvagroupe.ch/front/images/scissors.png"
                 style="width: 10px; height: 10px;"
             />
         </div>
         <div style="background-color: white; width: 11px; height: 11px;position: absolute; left: 1rem;top:-6.5px;transform: rotate(-90deg)">
             <img 
-                src="https://gvacars.ch/front/images/scissors.png"
+                src="https://gvagroupe.ch/front/images/scissors.png"
                 style="width: 10px; height: 10px;"
             />
         </div>
@@ -53,7 +53,7 @@
         <p class="fs_16 font_bold" style="margin-top: 0.6rem !important;margin-bottom: 0.2rem !important;margin-left: 1rem !important;">Récépissé</p>
         <p class="fs_10 font_bold" style="margin-left: 1rem !important;">Compte / Payable à</p>
         <p class="fs_11" style="line-height: 11px;margin-left: 1rem !important;">CH10 0900 0000 1631 6822 5</p>
-        <p class="fs_11" style="line-height: 11px;margin-left: 1rem !important;">GVACARS</p>
+        <p class="fs_11" style="line-height: 11px;margin-left: 1rem !important;">GVAGROUPE</p>
         <p class="fs_11" style="line-height: 11px;margin-left: 1rem !important;">Impasse du Tilleul 12</p>
         <p class="fs_11" style="line-height: 11px;margin-left: 1rem !important;">1510 Moudon</p>
 
@@ -87,7 +87,7 @@
         <div class="d_inline" style="width: 35%;vertical-align: top">
             <p class="fs_16 font_bold" style="margin-top: 0.6rem !important;">Section paiement</p>
             <img 
-                src="https://gvacars.ch/front/images/QR.png"
+                src="https://gvagroupe.ch/front/images/QR.png"
                 style="width: 170px; height: 170px;margin-top:1rem;"
             />
         </div>
@@ -95,7 +95,7 @@
         <div class="d_inline"  style="width: 52%;vertical-align: top;">
             <p class="fs_13 font_bold" style="margin-top: 0.6rem !important;">Compte / Payable à</p>
             <p class="fs_12" style="line-height: 12px;">CH10 0900 0000 1631 6822 5</p>
-            <p class="fs_12" style="line-height: 12px;">GVACARS</p>
+            <p class="fs_12" style="line-height: 12px;">GVAGROUPE</p>
             <p class="fs_12" style="line-height: 12px;">Impasse du Tilleul 12</p>
             <p class="fs_12" style="line-height: 12px;">1510 Moudon</p>
 

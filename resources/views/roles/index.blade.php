@@ -19,7 +19,7 @@
         <div class="container-fluid"> 
                               
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Rôles', 'route' => 'roles', 'active' => true]
                 ]

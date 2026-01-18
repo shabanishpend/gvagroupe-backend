@@ -17,7 +17,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des réservations', 'route' => 'reservations.index'],
                     ['label' => 'Réservations', 'active' => true]

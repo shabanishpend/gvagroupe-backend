@@ -7,13 +7,13 @@
 <meta property="og:image:secure_url" content="/back/img/cars/{{ $car->image_1 }}" />
 <meta property="og:image:width" content="700" /> 
 <meta property="og:image:height" content="400" />
-<meta property="og:title" content="{{ $car->name }} | GVACARS">
+<meta property="og:title" content="{{ $car->name }} | GVAGROUPE">
 <meta property="og:description" content="{{ $car->description }}">
-<meta property="og:url" content="https://gvacars.ch/car/{{ $car->id }}">
+<meta property="og:url" content="https://gvagroupe.ch/car/{{ $car->id }}">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, noarchive">
-<meta name="author" content="{{ $car->name }} | GVACARS" />
-<meta property="twitter:title" content="{{ $car->name }} | GVACARS" />
+<meta name="author" content="{{ $car->name }} | GVAGROUPE" />
+<meta property="twitter:title" content="{{ $car->name }} | GVAGROUPE" />
 @endsection
 
 @section('content')

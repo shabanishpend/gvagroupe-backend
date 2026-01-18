@@ -175,10 +175,10 @@ class FactureEmailHistoryController extends Controller
                     
                     // Get facture name safely
                     $factureName = '-';
-                    $website = 'gvacars';
+                    $website = 'gvagroupe';
                     if ($email->facture) {
                         $factureName = $email->facture->name ?? '-';
-                        $website = $email->facture->website ?? 'gvacars';
+                        $website = $email->facture->website ?? 'gvagroupe';
                     }
                     
                     // Get status badge safely

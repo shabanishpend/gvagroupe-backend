@@ -158,12 +158,12 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'offres',
-                'backRouteParams' => [$website ?? 'gvacars'],
+                'backRouteParams' => [$website ?? 'gvagroupe'],
                 'items' => [
-                    ['label' => 'Gestion des offres', 'route' => 'offres', 'routeParams' => [$website ?? 'gvacars']],
+                    ['label' => 'Gestion des offres', 'route' => 'offres', 'routeParams' => [$website ?? 'gvagroupe']],
                     ['label' => 'Offres', 'active' => true]
                 ]
             ])    
@@ -209,7 +209,7 @@
                             @endforeach
                         </select>
                         
-                    @if($website == 'gvacars')
+                    @if($website == 'gvagroupe')
                             <select 
                                 class="form-control select2 select" 
                                 data-toggle="select2" 
@@ -273,7 +273,7 @@
 
                 <h2 class="title color-black">Offre</h2>
 
-                @if($website == 'gvacars')
+                @if($website == 'gvagroupe')
                 <div class="mb-1">
                     Masquer les détails de la voiture
                     <select name="hide_car_details" id="hide_car_details">
@@ -907,7 +907,7 @@
 </script>
 
 <script>
-    @if($website == 'gvacars')
+    @if($website == 'gvagroupe')
     document.getElementById('car_details').style.display = 'none';
     document.getElementById('hide_car_details').addEventListener('change', function() {
         var carDetails = document.getElementById('car_details');

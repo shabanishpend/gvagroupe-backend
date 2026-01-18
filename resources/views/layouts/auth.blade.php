@@ -2,7 +2,7 @@
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
     <head>
         <meta charset="utf-8" />
-        <title>Se connecter | GVACARS</title>
+        <title>Se connecter | GVAGROUPE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -31,7 +31,7 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <p class="mb-0 text-muted">&copy;
-                                    <script>document.write(new Date().getFullYear())</script> GVACARS. Crafted with <i class="mdi mdi-heart text-danger"></i> by TL.
+                                    <script>document.write(new Date().getFullYear())</script> GVAGROUPE. Crafted with <i class="mdi mdi-heart text-danger"></i> by TL.
                                 </p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
         </div>
 
         {{--<footer class="footer footer-alt">
-            <script>document.write(new Date().getFullYear())</script> © GVACARS
+            <script>document.write(new Date().getFullYear())</script> © GVAGROUPE
         </footer>--}}
 
         <!-- JAVASCRIPT -->

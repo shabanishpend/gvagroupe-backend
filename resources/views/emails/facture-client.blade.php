@@ -12,13 +12,13 @@
     Nous vous remercions de votre confiance et restons à votre disposition pour toute information complémentaire.
     <br/><br/>
     Cordialement,<br/>
-    @if($data['website'] == 'gvacars')
-    GVACARS<br/>
+    @if($data['website'] == 'gvagroupe')
+    GVAGROUPE<br/>
     @else
     MAFLOTTE<br/>
     @endif
-    @if($data['website'] == 'gvacars')
-    contact@gvacars.ch <br/>
+    @if($data['website'] == 'gvagroupe')
+    contact@gvgroupe.ch <br/>    
     076/265.33.97 <br/>
     @endif
     </p>

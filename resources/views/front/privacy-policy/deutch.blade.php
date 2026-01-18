@@ -15,7 +15,7 @@
 
     <li><b>Affiliate</b> bedeutet eine Entität, die eine andere Partei kontrolliert, von ihr kontrolliert wird oder sich unter gemeinsamer Kontrolle mit einer Partei befindet, wobei "Kontrolle" den Besitz von 50% oder mehr der Anteile, Eigenkapitalinteressen oder anderer Wertpapiere bedeutet, die zur Wahl von Direktoren oder einer anderen Verwaltungsbehörde berechtigen.</li>
 
-    <li><b>Unternehmen</b> (bezeichnet als "das Unternehmen", "Wir", "Uns" oder "Unser" in diesem Abkommen) bezieht sich auf GVACARS, Rue Pré-Bouvier 8, 1214 Satigny.</li>
+    <li><b>Unternehmen</b> (bezeichnet als "das Unternehmen", "Wir", "Uns" oder "Unser" in diesem Abkommen) bezieht sich auf GVAGROUPE, Rue Pré-Bouvier 8, 1214 Satigny.</li>
 
     <li><b>Cookies</b> sind kleine Dateien, die von einer Website auf Ihrem Computer, Mobilgerät oder einem anderen Gerät platziert werden und die Einzelheiten Ihres Browserverlaufs auf dieser Website unter vielen anderen Verwendungen enthalten.</li>
 
@@ -31,7 +31,7 @@
 
     <li><b>Nutzungsdaten</b> beziehen sich auf Daten, die automatisch gesammelt werden, entweder durch die Nutzung des Dienstes oder aus der Infrastruktur des Dienstes selbst (zum Beispiel die Dauer eines Seitenbesuchs).</li>
 
-    <li><b>Website</b> bezieht sich auf GVACARS, zugänglich von <a href="https://gvacars.ch/">https://gvacars.ch/</a></li>
+    <li><b>Website</b> bezieht sich auf GVAGROUPE, zugänglich von <a href="https://gvagroupe.ch/">https://gvagroupe.ch/</a></li>
 
     <li><b>Sie</b> bezieht sich auf die Einzelperson, die den Dienst nutzt oder darauf zugreift, oder das Unternehmen oder eine andere juristische Entität, in deren Namen eine solche Person den Dienst nutzt oder darauf zugreift, je nachdem.</li>
 </ul>
@@ -207,9 +207,9 @@ Wir verwenden sowohl Session- als auch Persistente Cookies für die unten aufgef
 <p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, können Sie uns kontaktieren:</p>
 
 <ul>
-    <li>Per E-Mail: contact@gvacars.ch</li>
+    <li>Per E-Mail: contact@gvagroupe.ch</li>
 
-    <li>Indem Sie diese Seite auf unserer Website besuchen: <a href="https://gvacars.ch/contact">https://gvacars.ch/contact</a></li>
+    <li>Indem Sie diese Seite auf unserer Website besuchen: <a href="https://gvagroupe.ch/contact">https://gvagroupe.ch/contact</a></li>
 
     <li>Per Telefonnummer: +41762653397</li>
 

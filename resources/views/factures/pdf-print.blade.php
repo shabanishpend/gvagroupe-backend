@@ -176,7 +176,7 @@
                     @else
                     <img 
                         class="logo_header" 
-                        src="https://gvacars.ch/front/assets/img/logo.webp" 
+                        src="https://gvagroupe.ch/front/assets/img/logo.webp" 
                     >
                     @endif
                 </div>
@@ -198,7 +198,7 @@
                     <img 
                         class="logo_header" 
                         style="width: 150px; object-position: right;"
-                        src="https://gvacars.ch/front/assets/images/logo-no-bg.png" 
+                        src="https://gvagroupe.ch/front/assets/images/logo-no-bg.png" 
                     >
                 </div>
             </div>
@@ -208,8 +208,8 @@
 
         <div class="w_100 position-relative">
             <div style="margin-top:30px;width: 40%; float: right;">
-                @if($data['website'] == 'maflotte' || $data['website'] == 'gvacars')
-                <p class="fs_11 text-left"><span style="border-bottom: 1px solid black;">GVACARS, Impasse du Tilleul 12, 1510 Moudon</span></p>
+                @if($data['website'] == 'maflotte' || $data['website'] == 'gvagroupe')
+                <p class="fs_11 text-left"><span style="border-bottom: 1px solid black;">GVAGROUPE, Impasse du Tilleul 12, 1510 Moudon</span></p>
                 @endif
                 @if(isset($data['client']['name']) || isset($data['client']['surname']))
                     <p class="">{{ $data['client']['name'] ?? '' }} {{ $data['client']['surname'] ?? '' }}</p>
@@ -223,7 +223,7 @@
                     <p class="">{{ $data['client']['postal_code'] ?? '' }} {{ $data['client']['city'] ?? '' }}</p>
                 @endif
                 
-                @if($data['website'] == 'gvacars')
+                @if($data['website'] == 'gvagroupe')
                     @if(isset($data['factured_city']) || isset($data['factured_date']))
                         <p class="" style="margin-top: 4rem !important;">
                             {{ $data['factured_city'] ?? 'City not specified' }}, le {{ date('d.m.Y', strtotime($data['factured_date'] ?? now())) }}
@@ -256,7 +256,7 @@
             </div>
             <div class="w_100" style="padding-top: 10px;padding-bottom: 10px;">
 
-                @if($data['website'] == 'gvacars')
+                @if($data['website'] == 'gvagroupe')
                 <div class="w_100 d_inline" style="border-bottom: 1px solid black;margin-bottom: 8px !important;padding-bottom: 8px;">
                     <div class="w_50 d_inline">
                         <p class="fs_14">Date d’intervention:</p>
@@ -296,7 +296,7 @@
                 </div>
                 @endif
 
-                @if($data['hide_car_details'] == 1 && $data['website'] == 'gvacars')
+                @if($data['hide_car_details'] == 1 && $data['website'] == 'gvagroupe')
                 <div>
                     <div class="w_50 d_inline">
                         <div class="w_40 d_inline">

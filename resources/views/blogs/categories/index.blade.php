@@ -17,7 +17,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des catégories de blogs', 'route' => 'blogs-categories'],
                     ['label' => 'Catégories de blogs', 'active' => true]
@@ -100,8 +100,8 @@
 @section('custom_script')
 <script>
 function onDelete(id) {
-    let blog_id = $('#blog_id');
-    blog_id.val(id);
+    let blog_category_id = $('#blog_category_id');
+    blog_category_id.val(id);
 }
 </script>
 <script>

@@ -176,7 +176,7 @@
                 @else
                     <img 
                         class="logo_header" 
-                        src="https://gvacars.ch/front/assets/img/logo.webp" 
+                        src="https://gvagroupe.ch/front/assets/img/logo.webp" 
                     >
                 @endif
                 </div>
@@ -197,7 +197,7 @@
                 <div>
                     <img 
                         class="logo_header" 
-                        src="https://gvacars.ch/front/assets/images/logo-no-bg.png" 
+                        src="https://gvagroupe.ch/front/assets/images/logo-no-bg.png" 
                     >
                 </div>
             </div>
@@ -207,8 +207,8 @@
 
         <div class="w_100 position-relative text-right">
             <div style="margin-top:30px;width: 40%; float: right;">
-                @if($website == 'maflotte' || $website == 'gvacars')
-                <p class="fs_11 text-left"><span style="border-bottom: 1px solid black;">GVACARS, Impasse du Tilleul 12, 1510 Moudon</span></p>
+                @if($website == 'maflotte' || $website == 'gvagroupe')
+                <p class="fs_11 text-left"><span style="border-bottom: 1px solid black;">GVAGROUPE, Impasse du Tilleul 12, 1510 Moudon</span></p>  
                 @endif
                 @if(isset($client['name']) || isset($client['surname']))
                     <p class="fs_12 text-left">{{ $client['name'] ?? '' }} {{ $client['surname'] ?? '' }}</p>
@@ -221,7 +221,7 @@
                 @if(isset($client['postal_code']) || isset($client['city']))
                     <p class="fs_12 text-left">{{ $client['postal_code'] ?? '' }} {{ $client['city'] ?? '' }}</p>
                 @endif
-                @if($website == 'gvacars')
+                @if($website == 'gvagroupe')
                     @if(isset($factured_city) || isset($factured_date))
                         <p class="fs_16 text-left" style="margin-top: 4rem !important;">
                             {{ $factured_city ?? 'City not specified' }}, le {{ date('d.m.Y', strtotime($factured_date ?? now())) }}
@@ -248,7 +248,7 @@
             </div>
             <div class="w_100 table_car_details" style="padding-top: 5px;padding-bottom: 0px;">
 
-                @if($website == 'gvacars' && $type_of_facture != 'offers')
+                @if($website == 'gvagroupe' && $type_of_facture != 'offers')
                 <div class="w_100 d_inline" style="border-bottom: 1px solid black;margin-bottom: 10px !important;padding-bottom: 0px;">
                     <div class="w_50 d_inline">
                         <p class="fs_14">Date d’intervention:</p>
@@ -547,10 +547,10 @@
        <div style="margin-top: 2rem;" class="page-break">
             <h3>Détails de paiement</h3>
             <p class="fs_14"><span class="font_bold">Banque:</span> PostFinance AG</p>
-            <p class="fs_14"><span class="font_bold">Titulaire du compte:</span> GVACARS</p>
+            <p class="fs_14"><span class="font_bold">Titulaire du compte:</span> GVAGROUPE</p>
             <p class="fs_14"><span class="font_bold">BIC:</span> POFICHBEXXX</p>
             <p class="fs_14"><span class="font_bold">IBAN:</span> CH10 0900 0000 1631 6822 5</p>
-            <p class="fs_14"><span class="font_bold">E-mail:</span> contact@gvacars.ch</p>
+            <p class="fs_14"><span class="font_bold">E-mail:</span> contact@gvgroupe.ch</p>
        </div>--}}
 
        <p style="margin-top: 2rem !important;margin-bottom:7px !important;" class="fs_14">Vous avez des questions? N’hésitez pas à nous contacter!</p>

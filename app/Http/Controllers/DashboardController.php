@@ -25,14 +25,14 @@ class DashboardController extends Controller
         $this->costService = $costService;
     }
     
-    public function index(Request $request, $website = 'gvacars')
+    public function index(Request $request, $website = 'gvagroupe')
     {
         if($this->userService->isDepensesManagment()){
             return redirect()->route('costs');
         }
 
         if (is_null($website)) {
-            $website = 'gvacars';
+            $website = 'gvagroupe';
         }
 
         if($website == 'maflotte'){
@@ -99,7 +99,7 @@ class DashboardController extends Controller
 
     public function facturesRaports(Request $request){
         $fields = $request->all();
-        $factures = $this->factureService->getFacturesRaports($fields['dateFrom'], $fields['dateTo'], 'gvacars', $request->client);
+        $factures = $this->factureService->getFacturesRaports($fields['dateFrom'], $fields['dateTo'], 'gvagroupe', $request->client);
         $total_price = $this->factureService->getTotalPriceByRange($factures);
         $total_price_depenses = $this->factureService->getTotalPriceByRangeDepenses($factures);
         

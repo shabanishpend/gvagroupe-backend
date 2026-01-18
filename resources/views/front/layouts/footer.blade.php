@@ -8,12 +8,12 @@
                         <address class="s1">
                             <span><i class="id-color fa fa-map-marker fa-lg"></i>Rue Pré-Bouvier 8 1214 Satigny</span>
                             <span><i class="id-color fa fa-phone fa-lg"></i><a href="tel:+41762653397">+41762653397</a></span>
-                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a aria-label="mail" href="mailto: contact@gvacars.ch">contact@gvacars.ch</a></span>
+                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a aria-label="mail" href="mailto: contact@gvgroupe.ch">contact@gvgroupe.ch</a></span>
                         </address>
 
                         <div class="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=100066238585421" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a href="https://www.instagram.com/gva.cars/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                        <a href="https://www.instagram.com/gvgroupe/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
                     </div>
                     </div>
                 </div>

@@ -15,7 +15,7 @@
 
     <li><b>Affilié</b> désigne une entité qui contrôle, est contrôlée par, ou est sous contrôle commun avec une partie, où "contrôle" signifie la possession de 50 % ou plus des actions, parts d'intérêt ou autres titres de participation donnant droit de vote pour l'élection des directeurs ou autre autorité de gestion.</li>
 
-    <li><b>Société</b> (référée comme "la Société", "Nous", "Notre" ou "Nos" dans cet Accord) fait référence à GVACARS, Rue Pré-Bouvier 8, 1214 Satigny.</li>
+    <li><b>Société</b> (référée comme "la Société", "Nous", "Notre" ou "Nos" dans cet Accord) fait référence à GVAGROUPE, Rue Pré-Bouvier 8, 1214 Satigny.</li>
 
     <li><b>Cookies</b> sont de petits fichiers qui sont placés sur votre ordinateur, dispositif mobile ou tout autre appareil par un site web, contenant les détails de votre historique de navigation sur ce site web parmi ses nombreuses utilisations.</li>
 
@@ -31,7 +31,7 @@
 
     <li><b>Données d'Utilisation</b> désignent les données collectées automatiquement, générées par l'utilisation du Service ou à partir de l'infrastructure du Service elle-même (par exemple, la durée d'une visite de page).</li>
 
-    <li><b>Site Web</b> fait référence à GVACARS, accessible depuis <a href="https://gvacars.ch/">https://gvacars.ch/</a></li>
+    <li><b>Site Web</b> fait référence à GVAGROUPE, accessible depuis <a href="https://gvagroupe.ch/">https://gvagroupe.ch/</a></li>
 
     <li><b>Vous</b> désigne l'individu accédant ou utilisant le Service, ou l'entreprise, ou autre entité juridique pour le compte de laquelle un tel individu accède ou utilise le Service, selon le cas.</li>
 </ul>
@@ -197,9 +197,9 @@ Nous utilisons à la fois des cookies Persistants et de Session pour les finalit
 <p>Si vous avez des questions sur cette Politique de Confidentialité, Vous pouvez nous contacter :</p>
 
 <ul>
-    <li>Par e-mail : contact@gvacars.ch</li>
+    <li>Par e-mail : contact@gvagroupe.ch</li>    
 
-    <li>En visitant cette page sur notre site Web : <a href="https://gvacars.ch/contact">https://gvacars.ch/contact</a></li>
+    <li>En visitant cette page sur notre site Web : <a href="https://gvagroupe.ch/contact">https://gvagroupe.ch/contact</a></li>
 
     <li>Par numéro de téléphone : +41762653397</li>
 

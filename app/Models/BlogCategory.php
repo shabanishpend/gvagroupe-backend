@@ -12,7 +12,17 @@ class BlogCategory extends Model
     public $table = 'blogs_categories';
     protected $fillable = [
         'title',
+        'title_fr',
+        'title_en',
+        'title_de',
+        'title_sq',
+        'title_it',
         'description',
+        'description_fr',
+        'description_en',
+        'description_de',
+        'description_sq',
+        'description_it',
         'created_at',
         'updated_at'
     ];

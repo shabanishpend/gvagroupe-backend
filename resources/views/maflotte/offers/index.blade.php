@@ -17,7 +17,7 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des offres', 'route' => 'offres', 'routeParams' => [$website ?? 'maflotte']],
                     ['label' => 'Offres', 'active' => true]

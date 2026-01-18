@@ -15,7 +15,7 @@
     <div class="page-content">
         <div class="container-fluid">
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
                     ['label' => 'Gestion des dépenses', 'route' => 'costs.sub.categories'],
                     ['label' => 'Sous-catégories', 'active' => true]

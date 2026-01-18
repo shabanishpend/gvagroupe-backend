@@ -158,12 +158,12 @@
         <div class="container-fluid">
                        
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'showBackButton' => true,
                 'backRoute' => 'factures',
-                'backRouteParams' => [$website ?? 'gvacars'],
+                'backRouteParams' => [$website ?? 'gvagroupe'],
                 'items' => [
-                    ['label' => 'Gestion des factures', 'route' => 'factures', 'routeParams' => [$website ?? 'gvacars']],
+                    ['label' => 'Gestion des factures', 'route' => 'factures', 'routeParams' => [$website ?? 'gvagroupe']],
                     ['label' => 'Créer une facture', 'active' => true]
                 ]
             ])    
@@ -210,7 +210,7 @@
                     @endforeach
                 </select>
                 
-               @if($website == 'gvacars')
+               @if($website == 'gvagroupe')
                     <select 
                         class="form-control select2 select" 
                         data-toggle="select2" 
@@ -274,7 +274,7 @@
 
         <h2 class="title color-black">Facture</h2>
 
-        @if($website == 'gvacars')
+        @if($website == 'gvagroupe')
         <div class="mb-1">
             Détails de la voiture
             <select name="hide_car_details" id="hide_car_details">
@@ -393,7 +393,7 @@
         </div>
         
 
-        @if($website == 'gvacars')
+        @if($website == 'gvagroupe')
         <p class="intervenation">Intervention le <input style="min-width: 112px;" class="font_bold" type="date" placeholder="Écrire date" name="intervenation_date"  /></p>
         @endif
         @if($website == 'maflotte')
@@ -959,7 +959,7 @@ Facture semestrielle 1/2
 </script>
 
 <script>
-    @if($website == 'gvacars')
+    @if($website == 'gvagroupe')
     document.getElementById('car_details').style.display = 'none';
     document.getElementById('hide_car_details').addEventListener('change', function() {
         var carDetails = document.getElementById('car_details');

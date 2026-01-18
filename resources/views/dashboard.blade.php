@@ -41,9 +41,9 @@
         <div class="container-fluid">
 
             @include('layouts.breadcrump', [
-                'title' => 'GVACARS',
+                'title' => 'gvagroupe',
                 'items' => [
-                    ['label' => 'Tableau de bord', 'route' => 'dashboard', 'routeParams' => [request()->route('website') ?? 'gvacars'], 'active' => true]
+                    ['label' => 'Tableau de bord', 'route' => 'dashboard', 'routeParams' => [request()->route('website') ?? 'gvagroupe'], 'active' => true]
                 ]
             ])
 
@@ -263,7 +263,7 @@
                                                     <div class="text-nowrap">CHF {{ $facture->total_ttc }}</div>
                                                 </td>
                                                 <td class="table-action" style="width: 90px;text-align: right;">
-                                                    <a href="{{ route('factures.edit', [$facture->id, 'gvacars']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
+                                                    <a href="{{ route('factures.edit', [$facture->id, 'gvagroupe']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -424,7 +424,7 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="/">GVACARS</a></li>
+                        <li class="breadcrumb-item"><a href="/">GVGROUPE</a></li>
                         <li class="breadcrumb-item active">Tableau de bord</li>
                     </ol>
                 </div>
@@ -565,7 +565,7 @@
                             <i class="mdi mdi-dots-vertical"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="{{ route('factures', ['gvacars']) }}" class="dropdown-item">Voir tout</a>
+                            <a href="{{ route('factures', ['gvagroupe']) }}" class="dropdown-item">Voir tout</a>
                         </div>
                     </div>
                     <h4 class="header-title mb-3">Factures en suspens</h4>
@@ -598,7 +598,7 @@
                                         <h5 class="font-14 mt-1 font-weight-normal">{{ $facture->total_ttc }}</h5>
                                     </td>
                                     <td class="table-action" style="width: 90px;text-align: right;">
-                                        <a href="{{ route('factures.edit', [$facture->id, 'gvacars']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
+                                        <a href="{{ route('factures.edit', [$facture->id, 'gvagroupe']) }}" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
                                        {{-- <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>--}}
                                     </td>
                                 </tr>
@@ -1141,7 +1141,7 @@
         year_selected_costs.innerHTML = "";
         year_selected_costs.innerHTML = year;
         
-        fetch(`/admin/costs/api/${year}/gvacars`)
+        fetch(`/admin/costs/api/${year}/gvgroupe`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -1307,7 +1307,7 @@
         const all_year_revenue = document.getElementById('all_year_revenue');
         const year_revenu = document.getElementById('year_revenu');
         
-        fetch(`/admin/revenue/api/${year}/gvacars`)
+        fetch(`/admin/revenue/api/${year}/gvgroupe`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
