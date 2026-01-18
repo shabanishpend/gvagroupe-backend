@@ -129,6 +129,30 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | API Key Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This key is used to secure API endpoints and should be set in your .env
+    | file. Only requests with a valid X-API-Key header will be allowed.
+    |
+    */
+
+    'api_key' => env('API_KEY'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Allowed Origins for API
+    |--------------------------------------------------------------------------
+    |
+    | List of allowed origins for API requests. Leave empty to allow all origins
+    | (when API key is validated). Format: ['https://example.com', 'https://app.example.com']
+    |
+    */
+
+    'allowed_origins' => env('ALLOWED_ORIGINS') ? explode(',', env('ALLOWED_ORIGINS')) : [],
+
+    /*
+    |--------------------------------------------------------------------------
     | Maintenance Mode Driver
     |--------------------------------------------------------------------------
     |

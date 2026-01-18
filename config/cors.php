@@ -19,11 +19,13 @@ return [
 
     'allowed_methods' => ['*'],
 
+    // Note: Allowed origins can be restricted via ALLOWED_ORIGINS env variable
+    // The ValidateApiKey middleware provides additional security by validating the API key
     'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['*'],
+    'allowed_headers' => ['Content-Type', 'Accept', 'X-API-Key', 'Authorization'],
 
     'exposed_headers' => [],
 
