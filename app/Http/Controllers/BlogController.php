@@ -263,4 +263,16 @@ class BlogController extends Controller
             ], 500);
         }
     }
+
+    public function blogApi($id){
+        $blog = Blog::where('id', $id)
+        ->with(['categories.category', 'user'])
+        ->first();
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Blog récupéré avec succès',
+            'blog' => $blog
+        ]);
+    }
 }

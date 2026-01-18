@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('api.key')->get('/testimonials', [App\Http\Controllers\TestimonialController::class, 'testimonials']);
 Route::middleware('api.key')->get('/lasted-blogs', [App\Http\Controllers\BlogController::class, 'lastedBlogsApi']);
 Route::middleware('api.key')->get('/blogs', [App\Http\Controllers\BlogController::class, 'blogsApi']);
+Route::middleware('api.key')->get('/blog/{blog_id}', [App\Http\Controllers\BlogController::class, 'blogApi']);
 // Route::get('/wlbs', [App\Http\Controllers\WorldLeadingBrandController::class, 'wlbs']);
 // Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'contactSend']);
 
